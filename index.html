@@ -15,6 +15,9 @@ html, body {
   padding: 0;
   font-family: Arial, sans-serif;
   background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* HEADER */
@@ -56,7 +59,7 @@ html, body {
 .container {
   display: flex;
   width: 100%;
-  min-height: calc(100vh - 180px);
+  flex: 1;
 }
 
 /* SIDEBAR - LEFT PANEL (30%) */
@@ -83,6 +86,18 @@ html, body {
   line-height: 1.4;
 }
 
+.sidebar a {
+  color: #2B6B9F;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+  color: #1a4a7a;
+}
+
 .sidebar ul {
   padding-left: 18px;
   margin: 5px 0;
@@ -93,6 +108,33 @@ html, body {
   color: #333;
   font-size: 12px;
   line-height: 1.3;
+}
+
+/* CTA BUTTONS */
+.cta-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #2B6B9F;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.cta-btn:hover {
+  background: #1a4a7a;
 }
 
 /* MAIN CONTENT - RIGHT PANEL (70%) */
@@ -209,10 +251,12 @@ html, body {
   text-decoration: none;
   margin-right: 12px;
   display: inline-block;
+  transition: color 0.3s ease;
 }
 
 .product-card .links a:hover {
   text-decoration: underline;
+  color: #1a4a7a;
 }
 
 /* WRAPPER FOR LAYOUT */
@@ -226,6 +270,52 @@ html, body {
   display: flex;
   flex: 1;
   overflow: hidden;
+}
+
+/* FOOTER */
+.footer {
+  background: #2B2B2B;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 3px solid #2B6B9F;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-content .copyright {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer-content .tagline {
+  color: #bbb;
+  font-size: 13px;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.footer-content .email-link {
+  color: #5d9dd5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-content .email-link:hover {
+  color: #7eb3e8;
+  text-decoration: underline;
 }
 
 /* RESPONSIVE */
@@ -258,6 +348,14 @@ html, body {
   .products-grid {
     grid-template-columns: 1fr;
   }
+
+  .footer-content p {
+    font-size: 12px;
+  }
+
+  .footer {
+    padding: 20px 15px;
+  }
 }
 </style>
 </head>
@@ -281,10 +379,15 @@ html, body {
 <div class="sidebar">
 
   <h3>Contact</h3>
-  <p>📧 uzma.nazish67@gmail.com</p>
+  <p>📧 <a href="mailto:uzma.nazish67@gmail.com">uzma.nazish67@gmail.com</a></p>
   <p>📱 +91 8106154690</p>
   <p>📍 Kukatpally, Hyderabad</p>
-  <p>🔗 LinkedIn</p>
+  <p>🔗 <a href="https://www.linkedin.com/in/uzma-nazish-657a82346?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn Profile</a></p>
+
+  <div class="cta-buttons">
+    <a href="mailto:uzma.nazish67@gmail.com" class="cta-btn">📧 Email</a>
+    <a href="https://www.linkedin.com/in/uzma-nazish-657a82346?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="cta-btn">💼 LinkedIn</a>
+  </div>
 
   <h3>Education</h3>
   <p><b>MBA (Finance)</b><br>DRK College (2009–2011)</p>
@@ -324,7 +427,7 @@ html, body {
   <div class="section">
     <h3>Professional Summary</h3>
     <p>
-      Senior Business Analyst with 14+ years of experience delivering high-quality solutions across Agile and Waterfall environments. Expertise in requirement elicitation, stakeholder management, process optimization, and end-to-end SDLC execution. Proven track record supporting Life Sciences and e-commerce clients through strategic analysis and collaboration.
+      Senior Business Analyst with 14+ years of experience delivering high-quality solutions across Agile and Waterfall environments. Expertise in requirement elicitation, stakeholder management,[...]
     </p>
   </div>
 
@@ -398,7 +501,7 @@ html, body {
       <div class="client-name">Abbott Contigo (LATAM) – AEM Platform</div>
       <div class="domain">Consumer Health / Loyalty & Engagement Platform</div>
       <div class="description">
-        Migrated and enhanced the Abbott Contigo digital platform for LATAM by moving from Drupal to Adobe Experience Manager (AEM). Enabled modular, scalable architecture, seamless integrations (Salesforce, Cognito, Coveo), and zero-business-disruption content migration across multiple countries.
+        Migrated and enhanced the Abbott Contigo digital platform for LATAM by moving from Drupal to Adobe Experience Manager (AEM). Enabled modular, scalable architecture, seamless integrations [...]
       </div>
       <div class="links">
         <a href="https://www.contigo.abbott" target="_blank">🔗 Main Platform</a>
@@ -410,7 +513,7 @@ html, body {
       <div class="client-name">HealthCare Service Corporation (HCSC)</div>
       <div class="domain">Healthcare Insurance · Claims Processing</div>
       <div class="description">
-        Centralized knowledge repository used by claims processors to access procedures, policies, codes, forms, system prompts, and template letters. Portal redesign focused on content consolidation and faster retrieval to reduce Average Handling Time (AHT).
+        Centralized knowledge repository used by claims processors to access procedures, policies, codes, forms, system prompts, and template letters. Portal redesign focused on content consolida[...]
       </div>
     </div>
 
@@ -418,7 +521,7 @@ html, body {
       <div class="client-name">Royalty Intelligence Application</div>
       <div class="domain">Life Sciences · Licensing & Royalties</div>
       <div class="description">
-        Internal research application capturing and analyzing global royalty and licensing deals, including financial terms, royalty rates, trial phases, territories, licensee/licensor details, and partnership summaries. Supports decision-making for pharma and biotech clients.
+        Internal research application capturing and analyzing global royalty and licensing deals, including financial terms, royalty rates, trial phases, territories, licensee/licensor details, a[...]
       </div>
     </div>
 
@@ -426,7 +529,7 @@ html, body {
       <div class="client-name">Venture Finance & Healthcare Investment Database</div>
       <div class="domain">Healthcare · Venture Capital & Private Equity</div>
       <div class="description">
-        Built and maintained detailed profiles of healthcare venture firms, funds, and portfolio companies, including management bios, fund size, stage focus, industry preference, and capital deployment data.
+        Built and maintained detailed profiles of healthcare venture firms, funds, and portfolio companies, including management bios, fund size, stage focus, industry preference, and capital dep[...]
       </div>
     </div>
 
@@ -434,7 +537,7 @@ html, body {
       <div class="client-name">Product Sales & Analyst Consensus Research</div>
       <div class="domain">Financial Analytics · Healthcare & Pharma</div>
       <div class="description">
-        Collected and analyzed historical, estimated, and forecasted product sales data using company annual reports, SEC filings, and analyst consensus data. Enabled benchmarking and forecasting for client presentations and strategic assessments.
+        Collected and analyzed historical, estimated, and forecasted product sales data using company annual reports, SEC filings, and analyst consensus data. Enabled benchmarking and forecasting[...]
       </div>
       <div class="links">
         <a href="https://www.sec.gov/edgar" target="_blank">📊 SEC EDGAR Filings</a>
@@ -445,7 +548,7 @@ html, body {
       <div class="client-name">Process & Knowledge Management Assets</div>
       <div class="domain">Operations · Research Enablement</div>
       <div class="description">
-        Contributed to SOPs, process manuals, business rules, trackers, and training content to improve research efficiency, data accuracy, and onboarding speed. Focus areas: Data quality, turnaround time, reporting consistency, and process optimization.
+        Contributed to SOPs, process manuals, business rules, trackers, and training content to improve research efficiency, data accuracy, and onboarding speed. Focus areas: Data quality, turnar[...]
       </div>
     </div>
 
@@ -453,6 +556,15 @@ html, body {
 
 </div>
 
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-content">
+    <p class="copyright">© 2026 Uzma Nazish</p>
+    <p class="tagline">Building impactful solutions through business analysis, product thinking, and Agile delivery.</p>
+    <p><a href="mailto:uzma.nazish67@gmail.com" class="email-link">uzma.nazish67@gmail.com</a></p>
+  </div>
 </div>
 
 </body>
