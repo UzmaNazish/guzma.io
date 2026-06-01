@@ -146,6 +146,50 @@ html, body {
   color: #333;
 }
 
+/* PRODUCT CARD STYLING */
+.product-card {
+  background: #f9f9f9;
+  border-left: 3px solid #2B6B9F;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+}
+
+.product-card .client-name {
+  font-weight: bold;
+  color: #2B2B2B;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.product-card .domain {
+  color: #666;
+  font-size: 11px;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.product-card .description {
+  color: #555;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.product-card .links {
+  font-size: 11px;
+}
+
+.product-card .links a {
+  color: #2B6B9F;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.product-card .links a:hover {
+  text-decoration: underline;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .sidebar {
@@ -292,6 +336,66 @@ html, body {
       <li>Agile delivery expertise</li>
       <li>Process optimization and analytics</li>
     </ul>
+  </div>
+
+  <div class="section">
+    <h3>Notable Products & Solutions</h3>
+    
+    <div class="product-card">
+      <div class="client-name">Abbott Contigo (LATAM) – AEM Platform</div>
+      <div class="domain">Consumer Health / Loyalty & Engagement Platform</div>
+      <div class="description">
+        Migrated and enhanced the Abbott Contigo digital platform for LATAM by moving from Drupal to Adobe Experience Manager (AEM). Enabled modular, scalable architecture, seamless integrations (Salesforce, Cognito, Coveo), and zero-business-disruption content migration across multiple countries.
+      </div>
+      <div class="links">
+        <a href="https://www.contigo.abbott" target="_blank">🔗 Main Platform</a>
+        <a href="https://www.contigo.abbott/es-co" target="_blank">🔗 Regional Example (ES-CO)</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="client-name">HealthCare Service Corporation (HCSC)</div>
+      <div class="domain">Healthcare Insurance · Claims Processing</div>
+      <div class="description">
+        Centralized knowledge repository used by claims processors to access procedures, policies, codes, forms, system prompts, and template letters. The portal redesign focused on content consolidation, prioritization, and faster retrieval to reduce Average Handling Time (AHT).
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="client-name">Excellence Data Research – Royalty Intelligence Application</div>
+      <div class="domain">Life Sciences · Licensing & Royalties</div>
+      <div class="description">
+        Internal research application used to capture and analyze global royalty and licensing deals, including financial terms, royalty rates, trial phases, territories, licensee/licensor details, and partnership summaries. Supported decision-making for pharma and biotech clients.
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="client-name">Venture Finance & Healthcare Investment Database</div>
+      <div class="domain">Healthcare · Venture Capital & Private Equity</div>
+      <div class="description">
+        Built and maintained detailed profiles of healthcare venture firms, funds, and portfolio companies, including management bios, fund size, stage focus, industry preference, and capital deployment data.
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="client-name">Product Sales & Analyst Consensus Research</div>
+      <div class="domain">Financial Analytics · Healthcare & Pharma</div>
+      <div class="description">
+        Collected and analyzed historical, estimated, and forecasted product sales data using company annual reports, SEC filings, and analyst consensus data. Enabled benchmarking and forecasting for client presentations and strategic assessments.
+      </div>
+      <div class="links">
+        <a href="https://www.sec.gov/edgar" target="_blank">📊 SEC EDGAR Filings</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="client-name">Process & Knowledge Management Assets</div>
+      <div class="domain">Operations · Research Enablement</div>
+      <div class="description">
+        Contributed to SOPs, process manuals, business rules, trackers, and training content to improve research efficiency, data accuracy, and onboarding speed for new analysts. Focus areas: Data quality, turnaround time, reporting consistency, and process optimization.
+      </div>
+    </div>
+
   </div>
 
 </div>
